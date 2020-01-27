@@ -32,9 +32,6 @@ define([
     },
     init: function () {
       var self = this;
-      var template = self.$el.after(self.template({
-        _t: _t,
-      }));
       self.$el.slick({
          infinite: self.options.infinite,
          slidesToShow: self.options.slidesToShow,
