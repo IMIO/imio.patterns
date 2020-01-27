@@ -1,7 +1,7 @@
 /* global require
 * Example: Slick element
 <div class="pat-imio-slick"
-  data-pat-imio-slick='{"slidesToShow": 1, "slidesToScroll": 1, "infinite": true, "dots": false, "speed": 100}'>
+  data-pat-imio-slick='{"slidesToShow": 1, "arrows": true, "slidesToScroll": 1, "infinite": true, "dots": false, "speed": 100}'>
     <div>slide 1</div>
     <div>slide 2</div>
     <div>slide 3</div>
@@ -29,6 +29,7 @@ define([
       slidesToScroll: 3,
       speed: 300,
       dots: true,
+      arrows: true,
     },
     init: function () {
       var self = this;
@@ -38,6 +39,7 @@ define([
          slidesToScroll: self.options.slidesToScroll,
          speed: self.options.speed,
          dots: self.options.dots,
+         arrows: self.options.arrows,
          responsive: [
            {
              breakpoint: 1024,
