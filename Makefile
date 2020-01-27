@@ -10,4 +10,5 @@ grunt-dev:
 	npm install autoprefixer
 	npm install grunt-browser-sync grunt-contrib-watch grunt-contrib-less grunt-postcss grunt-contrib-cssmin
 	npm install grunt-contrib-uglify
+	npm install grunt-contrib-concat
 	grunt compile
