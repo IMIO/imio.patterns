@@ -19,7 +19,6 @@
     -ms-touch-action: pan-y;
         touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
-    background: red;
 }
 
 .slick-list
@@ -133,8 +132,8 @@
     font-weight: normal;
     font-style: normal;
 
-    src: url('./fonts/slick.eot');
-    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
+    src: url('../fonts/slick.eot');
+    src: url('../fonts/slick.eot?#iefix') format('embedded-opentype'), url('../fonts/slick.woff') format('woff'), url('../fonts/slick.ttf') format('truetype'), url('../fonts/slick.svg#slick') format('svg');
 }
 /* Arrows */
 .slick-prev,
@@ -169,6 +168,7 @@
     color: transparent;
     outline: none;
     background: transparent;
+    box-shadow: none;
 }
 .slick-prev:hover:before,
 .slick-prev:focus:before,
@@ -176,6 +176,7 @@
 .slick-next:focus:before
 {
     opacity: 1;
+    box-shadow: none;
 }
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before
@@ -191,7 +192,7 @@
     line-height: 1;
 
     opacity: .75;
-    color: white;
+    color: black;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
