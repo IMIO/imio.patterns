@@ -24,6 +24,13 @@ define([
     trigger: '.pat-imio-slick',
     parser: 'mockup',
     defaults: {
+      lazyLoad: 'ondemand',
+      fade: false,
+      vertical: false,
+      cssEase: 'linear',
+      autoplay: false,
+      autoplaySpeed: 2000, //end new attr
+      pauseOnFocus: true,
       centerMode:false,
       infinite: true,
       slidesToShow: 3,
@@ -35,6 +42,14 @@ define([
     init: function () {
       var self = this;
       self.$el.slick({
+         lazyLoad: self.options.lazyLoad,
+         fade: self.options.fade,
+         vertical: self.options.vertical,
+         cssEase: self.options.cssEase,
+         autoplay: self.options.autoplay,
+         autoplaySpeed: self.options.autoplaySpeed,
+         pauseOnFocus: self.options.pauseOnFocus,
+
          infinite: self.options.infinite,
          centerMode: self.options.centerMode,
          slidesToShow: self.options.slidesToShow,
