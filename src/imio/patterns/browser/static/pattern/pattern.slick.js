@@ -24,7 +24,6 @@ define([
     trigger: '.pat-imio-slick',
     parser: 'mockup',
     defaults: {
-      lazyLoad: 'ondemand',
       fade: false,
       vertical: false,
       cssEase: 'linear',
@@ -42,7 +41,6 @@ define([
     init: function () {
       var self = this;
       self.$el.slick({
-         lazyLoad: self.options.lazyLoad,
          fade: self.options.fade,
          vertical: self.options.vertical,
          cssEase: self.options.cssEase,
