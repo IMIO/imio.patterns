@@ -24,6 +24,7 @@ define([
     trigger: '.pat-imio-slick',
     parser: 'mockup',
     defaults: {
+      centerMode:false,
       infinite: true,
       slidesToShow: 3,
       slidesToScroll: 3,
@@ -35,6 +36,7 @@ define([
       var self = this;
       self.$el.slick({
          infinite: self.options.infinite,
+         centerMode: self.options.centerMode,
          slidesToShow: self.options.slidesToShow,
          slidesToScroll: self.options.slidesToScroll,
          speed: self.options.speed,
