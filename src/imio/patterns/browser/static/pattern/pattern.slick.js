@@ -81,26 +81,26 @@ define([
          arrows: self.options.arrows,
          responsive: [
            {
-             breakpoint: self.options.breakpoint_full,
+             breakpoint: self.options.responsive[0].breakpoint,
              settings: {
-               slidesToShow: self.options.slidesToShow_full,
-               slidesToScroll: self.options.slidesToScroll_full,
+               slidesToShow: self.options.responsive[0].settings.slidesToShow,
+               slidesToScroll: self.options.responsive[0].settings.slidesToScroll,
                infinite: true,
                dots: true
              }
            },
            {
-             breakpoint: self.options.breakpoint_medium,
+             breakpoint: self.options.responsive[1].breakpoint,
              settings: {
-               slidesToShow: self.options.slidesToShow_medium,
-               slidesToScroll: self.options.slidesToScroll_medium
+               slidesToShow: self.options.responsive[1].settings.slidesToShow,
+               slidesToScroll: self.options.responsive[1].settings.slidesToShow
              }
            },
            {
-             breakpoint: self.options.breakpoint_small,
+             breakpoint: self.options.responsive[2].breakpoint,
              settings: {
-               slidesToShow: self.options.slidesToShow_small,
-               slidesToScroll: self.options.slidesToScroll_small
+               slidesToShow: self.options.responsive[2].settings.slidesToShow,
+               slidesToScroll: self.options.responsive[2].settings.slidesToShow
              }
            }
          ]
