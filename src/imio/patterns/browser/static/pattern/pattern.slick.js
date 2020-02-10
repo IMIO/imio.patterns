@@ -36,18 +36,31 @@ define([
       slidesToScroll: 3,
       speed: 300,
       dots: true,
-
-      breakpoint_full: 1024,
-      breakpoint_medium: 600,
-      breakpoint_small: 480,
-
-      slidesToShow_full:3,
-      slidesToShow_medium:2,
-      slidesToShow_small:1,
-
-      slidesToScroll_full:1,
-      slidesToScroll_medium:1,
-      slidesToScroll_small:1,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     },
     init: function () {
       var self = this;
