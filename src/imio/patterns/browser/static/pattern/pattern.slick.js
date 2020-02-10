@@ -93,14 +93,14 @@ define([
              breakpoint: self.options.responsive[1].breakpoint,
              settings: {
                slidesToShow: self.options.responsive[1].settings.slidesToShow,
-               slidesToScroll: self.options.responsive[1].settings.slidesToShow
+               slidesToScroll: self.options.responsive[1].settings.slidesToScroll
              }
            },
            {
              breakpoint: self.options.responsive[2].breakpoint,
              settings: {
                slidesToShow: self.options.responsive[2].settings.slidesToShow,
-               slidesToScroll: self.options.responsive[2].settings.slidesToShow
+               slidesToScroll: self.options.responsive[2].settings.slidesToScroll
              }
            }
          ]
