@@ -36,7 +36,18 @@ define([
       slidesToScroll: 3,
       speed: 300,
       dots: true,
-      arrows: true,
+
+      breakpoint_full: 1024,
+      breakpoint_medium: 600,
+      breakpoint_small: 480,
+
+      slidesToShow_full:3,
+      slidesToShow_medium:2,
+      slidesToShow_small:1,
+
+      slidesToScroll_full:1,
+      slidesToScroll_medium:1,
+      slidesToScroll_small:1,
     },
     init: function () {
       var self = this;
@@ -57,26 +68,26 @@ define([
          arrows: self.options.arrows,
          responsive: [
            {
-             breakpoint: 1024,
+             breakpoint: self.options.breakpoint_full,
              settings: {
-               slidesToShow: 3,
-               slidesToScroll: 3,
+               slidesToShow: self.options.slidesToShow_full,
+               slidesToScroll: self.options.slidesToScroll_full,
                infinite: true,
                dots: true
              }
            },
            {
-             breakpoint: 600,
+             breakpoint: self.options.breakpoint_medium,
              settings: {
-               slidesToShow: 2,
-               slidesToScroll: 2
+               slidesToShow: self.options.slidesToShow_medium,
+               slidesToScroll: self.options.slidesToScroll_medium
              }
            },
            {
-             breakpoint: 480,
+             breakpoint: self.options.breakpoint_small,
              settings: {
-               slidesToShow: 1,
-               slidesToScroll: 1
+               slidesToShow: self.options.slidesToShow_small,
+               slidesToScroll: self.options.slidesToScroll_small
              }
            }
          ]
