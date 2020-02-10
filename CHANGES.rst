@@ -5,7 +5,8 @@ Changelog
 1.0a3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add attr to make slick slider custom reponsive.
+  [thomlamb]
 
 
 1.0a2 (2020-02-06)
