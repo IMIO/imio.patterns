@@ -14,10 +14,10 @@
   <!--<includeDependencies package="." />-->
 
   <include package=".browser" />
+  <include package=".upgrades" />
 
   <include file="permissions.zcml" />
   <include file="profiles.zcml" />
-  <include file="upgrades.zcml" />
 
   <utility
       factory=".setuphandlers.HiddenProfiles"
