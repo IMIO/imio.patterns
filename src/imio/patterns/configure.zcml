@@ -16,26 +16,8 @@
   <include package=".browser" />
 
   <include file="permissions.zcml" />
-
+  <include file="profiles.zcml" />
   <include file="upgrades.zcml" />
-
-  <genericsetup:registerProfile
-      name="default"
-      title="imio.patterns"
-      directory="profiles/default"
-      description="Installs the imio.patterns add-on."
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      post_handler=".setuphandlers.post_install"
-      />
-
-  <genericsetup:registerProfile
-      name="uninstall"
-      title="imio.patterns (uninstall)"
-      directory="profiles/uninstall"
-      description="Uninstalls the imio.patterns add-on."
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      post_handler=".setuphandlers.uninstall"
-      />
 
   <utility
       factory=".setuphandlers.HiddenProfiles"

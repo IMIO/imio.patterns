@@ -5,7 +5,8 @@ Changelog
 1.0a4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Plone6 : add compatibility
+  [boulch]
 
 
 1.0a3 (2020-02-10)
