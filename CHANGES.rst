@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a4 (unreleased)
+1.0a4 (2023-07-04)
 ------------------
 
 - Fix bad python requirement
