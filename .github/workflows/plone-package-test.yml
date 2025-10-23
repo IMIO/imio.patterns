@@ -9,12 +9,8 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - python-version: 3.8
-            plone-version: 5.2
-          - python-version: 3.8
-            plone-version: "6.0"
-          - python-version: "3.10"
-            plone-version: "6.0"
+          - python-version: "3.12"
+            plone-version: "6.1"            
     steps:
       # git checkout
       - uses: actions/checkout@v2
@@ -27,7 +23,7 @@ jobs:
 
       # python eggs cache
       - name: Cache eggs
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         env:
           cache-name: cache-eggs
         with:
