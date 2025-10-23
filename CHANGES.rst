@@ -5,6 +5,9 @@ Changelog
 1.0a5 (unreleased)
 ------------------
 
+- Plone6.1 : add compatibility
+  [boulch]
+
 - Plone6 : add compatibility
   [boulch]
 
