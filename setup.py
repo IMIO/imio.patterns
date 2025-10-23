@@ -14,7 +14,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='imio.patterns',
-    version='1.0a4.dev0',
+    version='1.0a5.dev0',
     description="An add-on for Plone",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -44,7 +44,6 @@ setup(
     package_dir={'': 'src'},
     include_package_data=True,
     zip_safe=False,
-    python_requires="==2.7, >=3.6, <4.0",
     install_requires=[
         'setuptools',
         # -*- Extra requirements: -*-

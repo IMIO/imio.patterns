@@ -2,11 +2,18 @@ Changelog
 =========
 
 
-1.0a4 (unreleased)
+1.0a5 (unreleased)
 ------------------
 
 - Plone6 : add compatibility
   [boulch]
+
+
+1.0a4 (2023-07-04)
+------------------
+
+- Fix bad python requirement
+  [thomlamb]
 
 
 1.0a3 (2020-02-10)
