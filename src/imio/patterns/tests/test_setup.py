@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """Setup tests for this package."""
+from imio.patterns import HAS_PLONE_5_AND_MORE
 from imio.patterns.testing import IMIO_PATTERNS_INTEGRATION_TESTING  # noqa: E501
 from plone import api
 from plone.app.testing import setRoles
@@ -21,15 +22,17 @@ class TestSetup(unittest.TestCase):
     def setUp(self):
         """Custom shared utility setup for tests."""
         self.portal = self.layer['portal']
-        if get_installer:
-            self.installer = get_installer(self.portal, self.layer['request'])
-        else:
+        if not HAS_PLONE_5_AND_MORE:
             self.installer = api.portal.get_tool('portal_quickinstaller')
+        else:
+            self.installer = get_installer(self.portal, self.layer["request"])
 
     def test_product_installed(self):
-        """Test if imio.patterns is installed."""
-        self.assertTrue(self.installer.isProductInstalled(
-            'imio.patterns'))
+        """Test if imio.patterns is installed with portal_quickinstaller."""
+        if not HAS_PLONE_5_AND_MORE:
+            self.assertTrue(self.installer.isProductInstalled('imio.patterns'))
+        else:
+            self.assertTrue(self.installer.is_product_installed('imio.patterns'))
 
     def test_browserlayer(self):
         """Test that IImioPatternsLayer is registered."""
@@ -47,19 +50,22 @@ class TestUninstall(unittest.TestCase):
 
     def setUp(self):
         self.portal = self.layer['portal']
-        if get_installer:
-            self.installer = get_installer(self.portal, self.layer['request'])
-        else:
-            self.installer = api.portal.get_tool('portal_quickinstaller')
         roles_before = api.user.get_roles(TEST_USER_ID)
+        if not HAS_PLONE_5_AND_MORE:
+            self.installer = api.portal.get_tool('portal_quickinstaller')
+            self.installer.uninstallProducts(['imio.patterns'])
+        else:
+            self.installer = get_installer(self.portal, self.layer["request"])
+            self.installer.uninstall_product('imio.patterns')
         setRoles(self.portal, TEST_USER_ID, ['Manager'])
-        self.installer.uninstallProducts(['imio.patterns'])
         setRoles(self.portal, TEST_USER_ID, roles_before)
 
     def test_product_uninstalled(self):
         """Test if imio.patterns is cleanly uninstalled."""
-        self.assertFalse(self.installer.isProductInstalled(
-            'imio.patterns'))
+        if not HAS_PLONE_5_AND_MORE:
+            self.assertFalse(self.installer.isProductInstalled('imio.patterns'))
+        else:
+            self.assertFalse(self.installer.is_product_installed('imio.patterns'))
 
     def test_browserlayer_removed(self):
         """Test that IImioPatternsLayer is removed."""

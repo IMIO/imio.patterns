@@ -5,7 +5,8 @@ Changelog
 1.0a5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Plone6.1 : add compatibility. Remove useless/old Plone versions
+  [boulch]
 
 
 1.0a4 (2023-07-04)

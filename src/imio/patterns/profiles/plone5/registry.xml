@@ -6,6 +6,7 @@
         <value key="js">++plone++imio.patterns/pattern/pattern.slick.js</value>
     </records>
 
+
     <records prefix="plone.resources/imio-patterns-i18n" interface='Products.CMFPlone.interfaces.IResourceRegistry'>
         <value key="css"></value>
         <value key="js">++plone++imio.patterns/pattern/i18n.js</value>
@@ -40,7 +41,7 @@
             <element>translate</element>
         </value>
     </records>
-    
+
 
     <records prefix="plone.resources/slick" interface='Products.CMFPlone.interfaces.IResourceRegistry'>
         <value key="css">

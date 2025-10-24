@@ -12,3 +12,7 @@ grunt-dev:
 	npm install grunt-contrib-uglify
 	npm install grunt-contrib-concat
 	grunt compile
+
+.PHONY: cleanall
+cleanall:
+	rm -fr lib bin/buildout develop-eggs downloads eggs parts .installed.cfg	
