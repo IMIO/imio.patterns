@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a5 (unreleased)
+1.0a5 (2025-10-24)
 ------------------
 
 - Plone6.1 : add compatibility. Remove useless old Plone compatibility
